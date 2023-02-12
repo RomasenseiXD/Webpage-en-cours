@@ -12,33 +12,56 @@
 </head>
 <body>
     <div class="bgset">
+        <div class="SettingIcon">
+            <svg aria-controls='modalBox' width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear" id="modalBtn"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
+                <path fill-rule="evenodd"
+                    d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z" />
+            </svg>
+        </div>
+        <div id="modalBox" class="modal" tabindex="-1">
+            <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <div>
+                    <label for="target">Date Objectif</label>
+                    <input type="datetime-local" id='target'>
+                    <label for="saveDate">Sauvegarder la date</label>
+                    <input type="checkbox" name="saveDate" id="saveDate">
+                    <button id='btn'>Valider</button>
+                </div>
+            </div>
+        </div>
         <section>
             <div class="container">
                 <div class="containtbx">
                     <p class="text">Site en construction</p>
                 </div>
+                <p class=note>Votre site sera disponible dans:</p>
+                <p id=avertissement>Date atteinte</p>
                 <div class="compteur">
                     <div>
-                        <p class='valeur' id="day"></p>
-                        <p class="unite">Jours<span id='dayUnits'>s</span></p>
+                        <p class='valeur' id="day"></p><br>
+                        <p class="unite">Jour<span id='dayUnits'>s</span></p>
                     </div>
                     <div>
-                        <p class='valeur' id="hour"></p>
-                        <p class="unite">Heures<span id='hourUnits'>s</span></p>
+                        <p class='valeur' id="hour"></p><br>
+                        <p class="unite">Heure<span id='hourUnits'>s</span></p>
                     </div>
                     <div>
-                        <p class='valeur' id="minute"></p>
-                        <p class="unite">Minutes<span id='minuteUnits'>s</span></p>
+                        <p class='valeur' id="minute"></p><br>
+                        <p class="unite">Minute<span id='minuteUnits'>s</span></p>
                     </div>
                     <div>
-                        <p class='valeur' id="seconde"></p>
-                        <p class="unite">Secondes<span id='secondeUnits'>s</span></p>
+                        <p class='valeur' id="seconde"></p><br>
+                        <p class="unite">Seconde<span id='secondeUnits'>s</span></p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <script src="/script.js"></script>
+    <script src="/main.js"></script>
     <!-- lien du repertoire countdown:https://github.com/WebDevLyon/CountDown-Timer
         https://www.youtube.com/watch?v=3ZD3Spcw8AM :lien de la vidéo -->
     <!-- https://www.youtube.com/watch?v=IDLUtepWOPc : other tutorial -->
