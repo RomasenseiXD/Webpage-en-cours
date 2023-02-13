@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body{
@@ -12,39 +13,39 @@ body{
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
-    overflow: auto;
 }
 
 section{
     height: 100vh;
     display: grid;
     place-items: center;
-    overflow: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
-    height: 45vh;
-    place-items: center center;
-    overflow: auto;
+    width: 100vh;
+    height: 30%;
+
 }
 
-.containtbx{
-    width: 90vh;
+.containtbx {
+    width: 50vh;
     background-color:rgba(0, 0, 0, 0.589);
     border: solid 2px #fff;
-    border-radius: 25px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.288);
-    margin-top: -30px;
+    border-radius: 15px;
+    box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.288);
+    margin-left: 20%;
 }
 
 .text{
-    font-size: 32px;
-    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(234, 238, 241);
-    padding: 20px;
     text-align: center;
-    margin-top: 15px;
+    margin: 5px 0 5px;
 }
+
 .note{
     text-align: center;
     margin-top: 19px;
@@ -52,103 +53,18 @@ section{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',  ;
     font-style: italic;
     color: #ff0000;
-
 }
 
 .compteur {
-    flex-grow: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     color: rgb(22, 13, 13);
-    align-items: center;
     text-align: center;
+
 }
+
 .compteur p{
     padding: 5px;
     font-size: 20px;
-    position: absolute;
+    
 }
-
-/*Modal*/
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: grey;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-#closeModal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-#close:hover,
-#close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-@media screen and (max-width: 660px) {
-    body{
-        background-image:linear-gradient(rgba(255, 255, 255, 0.788),rgba(255, 255, 255, 0.788)), url(./img/bg1\ -\ 1.jpg);
-        background-position: left;
-    }
-    section{
-        width: 100%;
-        height: 100vh;
-        
-    }
-    .containtbx{
-        width: 100%;
-        text-align: center;
-        padding-top: 25%;
-    }
-    .containtbx p{
-        margin-top: -55px;
-        font-size:16px;
-    }
-    .avertissement{
-        font-size: 12px;
-    }
-    .compteur p{
-        font-size: 12px;
-    }
-}
-@media (orientation: landscape) {
-    section{
-        width: 100%;
-        height: 100vh;
-        align-items: center;
-    }
-    .containtbx{
-        width: 100vh;
-        height: 15%;
-        margin-top: 12%;
-    }
-    .container{
-        margin-top: -15%;
-    }
-    .containtbx p{
-        margin-top: -20px
-    }
-}
-  
